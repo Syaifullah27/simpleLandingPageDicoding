@@ -176,6 +176,30 @@
 
 
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-wrapper .hero-title {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.hero-wrapper .hero-desc {
+    animation: slideInFromLeft 1.5s ease-out forwards;
+}
+
+.hero-wrapper button {
+    animation: slideInFromLeft 2s ease-out forwards;
+}
+
+
 /* tablet */
 @media screen and (max-width: 1000px) {
     html {
