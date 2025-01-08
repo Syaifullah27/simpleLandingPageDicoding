@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    /* border: 1px solid red; */
+}
+
+
+
+.navbar-wrapper {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    /* background-color: rgba(16, 16, 24, 0.87);
+    box-shadow: 1px 1px 15px rgba(46, 46, 46, 0.5); */
+}
+
+
+.navbar {
+    max-width: 900px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+
+.navbar ul {
+    display: flex;
+    gap: 55px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0d0d0d;
+}
+
+.navbar ul li a:hover{
+    color: #2c3e50;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger img {
+    width: 30px;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.title-g{
+    font-size: 45px;
+    background: #2c3e50;
+    color: white;
+    position: relative;
+    top: 5px;
+    /* border: 1px solid red; */
+    
+}
+
+
+
+.hero-wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    /* border: 1px solid #ddd; */
+    padding: 0px 30px;
+    padding-top: 80px;
+}
+
+.hero {
+    /* border: 1px solid #ddd; */
+    height: 500px;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.hero-text{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    /* border: 1px solid red; */
+    width: 45%;
+}
+
+.hero-title {
+    font-size: 45px;
+}
+
+.hero-desc {
+    color: #0d0d0d;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.hero-text button {
+    border: none;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 40px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background: #263442;
+}
+
+.hero-image-wrapper{
+    /* border: 1px solid red; */
+    width: 40%;
+}
+
+.hero-image {
+    width: 55%;
+    /* border: 1px solid red; */
+    background-color: #2c3e50; /* Menetapkan latar belakang biru */
+    width: 250px; /* Lebar elemen div */
+    height: 250px; /* Tinggi elemen div */
+    border-radius: 50%; /* Membuat bentuk menjadi bulat */
+    display: flex; /* Menggunakan Flexbox untuk memposisikan isi */
+    justify-content: center; /* Mengatur teks agar berada di tengah secara horizontal */
+    align-items: center; /* Mengatur teks agar berada di tengah secara vertikal */
+}
+
+.hero-image h1 {
+    position: relative;
+    top: -20px;
+    /* border: 1px solid red; */
+    color: white; /* Warna teks 'g' putih */
+    font-size:150px; /* Ukuran font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Menghapus margin default dari h1 */
+}
+
+.social-media{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    right: 0px;
+    padding: 15px;
+    background-color: #2c3e50;
+    border-radius: 10px 0 0 10px;
+    /* border: 1px solid red; */
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+/* tablet */
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 12px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar ul {
+        gap: 15px;
+    }
+
+    .navbar ul li a {
+        color: #0d0d0d;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+    .social-media {
+        padding: 10px;
+    }
+
+    .social-media a {
+        font-size: 16px;
+    }
+
+}
+
+
+/* mobile */
+@media screen and (max-width: 650px) {
+    html {
+        font-size: 10px;
+    }
+
+    .list.aktif{
+        right: 0;
+    } 
+
+    .list {
+        position: absolute;
+        top: 100%; 
+        right: 100%;
+        background-color: #263442;
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        padding: 10px;
+    }
+
+    .list.aktif li a{
+        color: white;
+		display: inline-block !important;
+	}
+
+    .list.aktif li a:hover{
+        color: rgb(240, 248, 255);
+    }
+
+
+    .hero {
+        /* border: 1px solid rgb(30, 255, 0); */
+        flex-direction: column-reverse;
+        padding-top: 60px;
+    }
+
+    .hero-text {
+        padding-top:0px;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+        /* border: 1px solid red; */
+    }
+
+    .hero-title {
+        font-size: 35px;
+    }
+
+    .hero-desc {
+        /* border: 1px solid red; */
+        font-size: 14px;
+        width: 95%;
+    }
+
+    .hero-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-image h1{
+        font-size: 100px;
+    }
+
+   
+
+
+}
