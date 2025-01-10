@@ -27,7 +27,7 @@
 }
 
 .navbar-logo {
-    width: 260px;
+    width: 250px;
 }
 
 .navbar ul {
@@ -203,6 +203,10 @@
         color: #0d0d0d;
     }
 
+    .navbar-logo {
+        width: 200px;
+    }
+
     .hamburger {
         display: none;
     }
@@ -245,7 +249,7 @@
 
 
     .navbar-logo {
-        width: 200px;
+        width: 180px;
     }
 
     .navbar ul {
